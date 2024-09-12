@@ -1,4 +1,4 @@
-package com.ablancotunsa.lab01_loginSample
+package com.ablancotunsa.lab01_loginsample
 
 import org.junit.Test
 

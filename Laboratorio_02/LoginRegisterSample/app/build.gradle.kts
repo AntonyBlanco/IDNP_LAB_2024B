@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.ablancotunsa.lab01_loginsample"
+    namespace = "com.ablancotunsa.loginregistersample"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.ablancotunsa.lab01_loginsample"
+        applicationId = "com.ablancotunsa.loginregistersample"
         minSdk = 30
         targetSdk = 34
         versionCode = 1
@@ -34,8 +34,8 @@ android {
         jvmTarget = "1.8"
     }
 
-    buildFeatures {
-        viewBinding = true
+    viewBinding {
+        enable = true
     }
 }
 

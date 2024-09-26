@@ -1,14 +1,16 @@
 package com.ablancotunsa.loginregistersample
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import com.ablancotunsa.loginregistersample.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
-
+class LoginActivity : AppCompatActivity() {
     // Declaración correcta de view binding en Kotlin
     private lateinit var binding: ActivityMainBinding
 
@@ -30,6 +32,7 @@ class MainActivity : AppCompatActivity() {
         val edtUsername = binding.edtUsername
         val edtPassword = binding.edtPassword
         val btnLogin = binding.btnLogin
+        val btnAddAccount = binding.btnAddAccount
 
         // Listener para el botón de login
         btnLogin.setOnClickListener {
@@ -43,6 +46,10 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(applicationContext, "Error en la autenticación", Toast.LENGTH_SHORT).show()
                 Log.d(TAG, "Error en la autenticación")
             }
+        }
+        btnAddAccount.setOnClickListener {
+            val intent = Intent(applicationContext, AccountActivity::class.java)
+            startActivity(intent)
         }
     }
 

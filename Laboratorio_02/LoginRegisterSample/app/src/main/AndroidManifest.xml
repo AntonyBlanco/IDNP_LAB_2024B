@@ -10,13 +10,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Lab01_LoginSample"
+        android:theme="@style/Theme.LoginRegisterSample"
         tools:targetApi="31">
         <activity
-            android:name="com.ablancotunsa.loginregistersample.AccountActivity"
+            android:name=".AccountActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

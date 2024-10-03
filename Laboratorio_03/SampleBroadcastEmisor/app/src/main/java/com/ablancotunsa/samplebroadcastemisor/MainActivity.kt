@@ -11,7 +11,7 @@ import com.ablancotunsa.samplebroadcastemisor.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
     private val TAG = "EmisorMainActivity"
     private val EXTRA_MOON_PHASE = "org.ablancotunsa.samplebroadcastreceptor.MoonBroadcastReceiver.EXTRA_MOON_PHASE"
-    //val EXTRA_MESSAGE = "EXTRA_MESSAGE"
+    val EXTRA_MESSAGE = "EXTRA_MESSAGE"
 
     private lateinit var binding: ActivityMainBinding
 
@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
         ))
 
         intent.setAction(EXTRA_MOON_PHASE)
-        intent.putExtra(EXTRA_MOON_PHASE, message)
+        intent.putExtra(EXTRA_MESSAGE, message)
 
         sendBroadcast(intent)
         Log.d(TAG,"Mensaje enviado")
